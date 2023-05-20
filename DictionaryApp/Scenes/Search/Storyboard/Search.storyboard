@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eec-TL-Ey2">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Italic.ttf">
+            <string>Roboto-Italic</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="DictionaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="put-gE-9rK" customClass="CustomSearchBar" customModule="DictionaryApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="88" width="353" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="wIv-dm-7XU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leading">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.14999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvb-BY-qNa">
+                                <rect key="frame" x="0.0" y="778" width="393" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8S-yw-0xk">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="74"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="searchButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NLL-Wo-1Zb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-c2-bLV">
+                                        <rect key="frame" x="165.66666666666666" y="16" width="62" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.36078431372549019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8xb-c2-bLV" firstAttribute="top" secondItem="Jvb-BY-qNa" secondAttribute="top" constant="16" id="8Z9-Mu-he0"/>
+                                    <constraint firstItem="M8S-yw-0xk" firstAttribute="top" secondItem="Jvb-BY-qNa" secondAttribute="top" id="Kwr-Qp-az4"/>
+                                    <constraint firstItem="8xb-c2-bLV" firstAttribute="centerX" secondItem="Jvb-BY-qNa" secondAttribute="centerX" id="MNj-WT-zaD"/>
+                                    <constraint firstAttribute="height" constant="74" id="UGj-JK-21b"/>
+                                    <constraint firstAttribute="bottom" secondItem="M8S-yw-0xk" secondAttribute="bottom" id="fgd-YC-TdW"/>
+                                    <constraint firstItem="M8S-yw-0xk" firstAttribute="leading" secondItem="Jvb-BY-qNa" secondAttribute="leading" id="kmD-rB-6L1"/>
+                                    <constraint firstAttribute="trailing" secondItem="M8S-yw-0xk" secondAttribute="trailing" id="sjE-gZ-ItG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwU-8u-y7I">
+                                <rect key="frame" x="20" y="166" width="108" height="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-IE-7V2">
+                                <rect key="frame" x="0.0" y="221" width="393" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jvb-BY-qNa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1Z0-hQ-smx"/>
+                            <constraint firstItem="vwU-8u-y7I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="771-ew-hpK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jvb-BY-qNa" secondAttribute="trailing" id="8t6-Hi-pz6"/>
+                            <constraint firstItem="put-gE-9rK" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="88" id="BBm-Ir-UBj"/>
+                            <constraint firstItem="put-gE-9rK" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="DJs-GC-Peh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cwn-IE-7V2" secondAttribute="trailing" id="Gdi-TT-Gzt"/>
+                            <constraint firstItem="cwn-IE-7V2" firstAttribute="top" secondItem="vwU-8u-y7I" secondAttribute="bottom" constant="35" id="KVk-Xb-NH7"/>
+                            <constraint firstItem="Jvb-BY-qNa" firstAttribute="top" secondItem="cwn-IE-7V2" secondAttribute="bottom" constant="15" id="Whq-V0-7OF"/>
+                            <constraint firstAttribute="bottom" secondItem="Jvb-BY-qNa" secondAttribute="bottom" id="lBk-qI-hNF"/>
+                            <constraint firstItem="cwn-IE-7V2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qZu-hz-8zz"/>
+                            <constraint firstItem="vwU-8u-y7I" firstAttribute="top" secondItem="put-gE-9rK" secondAttribute="bottom" constant="30" id="sF3-lu-s4A"/>
+                            <constraint firstAttribute="trailing" secondItem="put-gE-9rK" secondAttribute="trailing" constant="20" id="xTw-WT-hXn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j5N-ge-b4M"/>
+                    <connections>
+                        <outlet property="recentSearchTableView" destination="cwn-IE-7V2" id="CCG-0W-Y1W"/>
+                        <outlet property="searchBar" destination="put-gE-9rK" id="bs2-PD-NWo"/>
+                        <outlet property="searchContainerView" destination="Jvb-BY-qNa" id="aGi-xZ-NYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993.1297709923663" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tNQ-O5-S8N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eec-TL-Ey2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="navBarBack" backIndicatorTransitionMaskImage="navBarBack" id="I4x-5j-dZv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="iOg-rA-tLU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zly-cg-mP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="navBarBack" width="18" height="18"/>
+        <image name="search" width="18" height="18"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
